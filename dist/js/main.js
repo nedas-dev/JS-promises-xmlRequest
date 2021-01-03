@@ -81,7 +81,9 @@ const activateRequest = (event) => {
     getJSON(astronautsUrlAPI)
         .then(getProfiles)
         .then(generateHTML)
-        .catch(error => console.log(error))
+        .catch(error => {
+            mainSection.innerHTML = "<h3 style='text-align: center; padding: 20px; background-color:white;'>Something went wrong...</h3>"
+        })
         .finally(() => event.target.remove())
 }
 
