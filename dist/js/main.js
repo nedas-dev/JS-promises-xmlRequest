@@ -1,4 +1,4 @@
-const astronautsUrlAPI = 'https://api.open-notify.org/astros.json';
+const astronautsUrlAPI = 'json/data.json';
 const wikiUrlAPI = 'https://en.wikipedia.org/api/rest_v1/page/summary/';
 const mainSection = document.querySelector('section.people');
 const submitButton = document.querySelector('button')
