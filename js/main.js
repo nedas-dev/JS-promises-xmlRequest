@@ -70,7 +70,6 @@ function generateHTML(data) {
         const pictureExists = 'thumbnail' in person;
         modifyAndAppendDivToDOM(div, person, pictureExists);
     });
-    submitButton.parentNode.style.display = "none";
 }
 
 
@@ -78,15 +77,15 @@ function generateHTML(data) {
 // .then() will run each time it will be successfully completed (Resolved)
 // .catch() will run if it will run into reject() function which means something failed in the Promise.
 // .finally() will only run if all promises were resolved successfully (all ran into resolve())
-const activateRequest = () => {
+const activateRequest = (event) => {
     getJSON(astronautsUrlAPI)
         .then(getProfiles)
         .then(generateHTML)
-        .finally(() => console.log('Mission Completed! The rocket is shipped'))
         .catch(error => console.log(error))
-
+        .finally(() => event.target.remove())
 }
 
 submitButton.addEventListener('click', (e) => {
     e.target.textContent = "Loading...";
+    activateRequest(e);
 })
