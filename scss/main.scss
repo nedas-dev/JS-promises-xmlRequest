@@ -1,0 +1,23 @@
+h1{
+    color: blue;
+}
+
+main{
+    section{
+        section{
+            img{
+                border-radius: 5px;;
+            }
+            display: flex;
+            padding: 2rem;
+            justify-content: space-evenly;
+            div{
+                padding: 2rem;
+                width: 50%;
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

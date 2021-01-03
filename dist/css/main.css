@@ -1,0 +1,14 @@
+h1 {
+  color: blue; }
+
+main section section {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-evenly; }
+  main section section img {
+    border-radius: 5px; }
+  main section section div {
+    padding: 2rem;
+    width: 50%; }
+    main section section div h2 {
+      text-align: center; }
